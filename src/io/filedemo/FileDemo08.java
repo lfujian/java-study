@@ -4,7 +4,7 @@ import java.io.File;
 
 /**
  * @author lfj 2015年11月4日
- * @Description: 使用listFiles()方法判断给定的一个路径是否是目录。---listFiles()--- (列出完整的路径，返回一个File对象数组)
+ * @Description: 
  */
 public class FileDemo08 {
     public static void main(String[] args) {
