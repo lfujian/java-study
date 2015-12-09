@@ -15,7 +15,7 @@ public class JunitTest {
         String a = "a";
         String b = "b";
         assertEquals("a", a);
-        assertEquals("c", b);
+        assertEquals("b", b);
     }
 
 }
