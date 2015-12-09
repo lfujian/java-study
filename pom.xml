@@ -4,38 +4,53 @@
 	<groupId>java-study</groupId>
 	<artifactId>java-study</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+	<dependencies>
+		<!-- junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.4</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+	
+	<!-- 构建项目需要的信息 -->
 	<build>
-		<sourceDirectory>src</sourceDirectory>
-		<resources>
+		<!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。--> 
+		<sourceDirectory>src/main/java</sourceDirectory>
+		<!-- 该元素设置了项目单元测试使用的源码目录，当测试项目的时候，构建系统会编译目录里的源码。 -->
+		<testSourceDirectory>src/test/java</testSourceDirectory>
+		<!-- 该元素描述了项目相关的所有资源路径列表，例如和项目相关的属性文件，这些资源被包含在最终的打包文件里。 -->
+		<!-- <resources>
 			<resource>
-				<directory>src</directory>
+				<directory>src/main/java</directory>
 				<excludes>
 					<exclude>**/*.java</exclude>
 				</excludes>
 			</resource>
-		</resources>
+		</resources> -->		
 		<plugins>
-			<plugin>
+			<!-- <plugin>
 				<artifactId>maven-compiler-plugin</artifactId>
 				<version>3.1</version>
 				<configuration>
 					<source>1.8</source>
 					<target>1.8</target>
 				</configuration>
-			</plugin>
+			</plugin> -->
 			<!-- cobertura 覆盖率 -->
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>cobertura-maven-plugin</artifactId>
 				<version>2.7</version>
 				<configuration>
-				        <encoding>UTF-8</encoding>
-				        <formats>
-				        	<format>xml</format>
-				        	<format>html</format>
-				        </formats>
-						<!-- aggregated reports for multi-module projects -->
-						<aggregate>true</aggregate>
+					<encoding>UTF-8</encoding>
+					<formats>
+						<format>xml</format>
+						<format>html</format>
+					</formats>
+					<!-- aggregated reports for multi-module projects -->
+					<aggregate>true</aggregate>
 				</configuration>
 			</plugin>
 			<!-- coveralls -->
@@ -49,17 +64,6 @@
 				</configuration>
 			</plugin>
 		</plugins>
-
 	</build>
-	
-	<dependencies>
-		<!-- junit -->
-		<dependency>
-			<groupId>junit</groupId>
-			<artifactId>junit</artifactId>
-			<version>4.4</version>
-			<scope>test</scope>
-		</dependency>
 
-	</dependencies>
 </project>
