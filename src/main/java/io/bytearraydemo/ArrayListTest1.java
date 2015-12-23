@@ -19,8 +19,9 @@ public class ArrayListTest1 {
         System.out.println("\n---转为 Iterator 输出---");
         // 更通用的输出方式
         for (Iterator<Integer> it = al.iterator(); it.hasNext();) {
-            Integer i = (Integer) it.next();
+            Integer i = it.next();
             System.out.print(i + "-");
         }
+        
     }
 }
