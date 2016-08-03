@@ -12,14 +12,39 @@
 			<version>4.4</version>
 			<scope>test</scope>
 		</dependency>
+
+		<dependency>
+			<groupId>com.google.code.gson</groupId>
+			<artifactId>gson</artifactId>
+			<version>2.2.4</version>
+		</dependency>
+
+		<!-- <dependency>
+			<groupId>org.json</groupId>
+			<artifactId>json</artifactId>
+			<version>20140107</version>
+		</dependency> -->
+
+	   <!--  <dependency>
+	      <groupId>org.json</groupId>
+	      <artifactId>json</artifactId>
+	      <version>20090211</version>
+	    </dependency> -->
+    
+		<dependency>
+			<groupId>commons-codec</groupId>
+			<artifactId>commons-codec</artifactId>
+			<version>1.9</version>
+		</dependency>
+
 	</dependencies>
-	
+
 	<!-- 构建项目需要的信息 -->
 	<build>
-		<!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。--> 
+		<!--该元素设置了项目源码目录，当构建项目的时候，构建系统会编译目录里的源码。该路径是相对于pom.xml的相对路径。 -->
 		<sourceDirectory>src/main/java</sourceDirectory>
 		<!-- 该元素设置了项目单元测试使用的源码目录，当测试项目的时候，构建系统会编译目录里的源码。 -->
-		<testSourceDirectory>src/test/java</testSourceDirectory>	
+		<testSourceDirectory>src/test/java</testSourceDirectory>
 		<plugins>
 			<!-- cobertura 覆盖率 -->
 			<plugin>
